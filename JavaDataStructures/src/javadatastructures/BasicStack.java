@@ -31,6 +31,18 @@ public class BasicStack<X> { // <X> is saying that we can type this class to any
     }
     
     public X access(X item) {
+        int itemLocation = -1;
         
+        for (int i = stackPointer; i > 0; i--) {
+            if (data[i].equals(item)) {
+                itemLocation = i;
+            }
+        }
+        
+        if (itemLocation > 0) {
+            for (int i = stackPointer; i > itemLocation; i--) {
+                data.pop();
+            }
+        }
     }
 }
