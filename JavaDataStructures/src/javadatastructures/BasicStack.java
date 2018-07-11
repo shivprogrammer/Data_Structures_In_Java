@@ -14,8 +14,18 @@ public class BasicStack<X> { // <X> is saying that we can type this class to any
     }
     
     public X pop() {
+        if (stackPointer == 0) {
+            throw new IllegalStateException("No more items on the stack");       
+        }
+
         return data[--stackPointer];
     }
     
+    public boolean contains(X item) {
+        
+    }
     
+    public X access(X item) {
+        
+    }
 }
