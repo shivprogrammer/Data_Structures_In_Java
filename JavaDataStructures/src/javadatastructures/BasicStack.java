@@ -37,5 +37,10 @@ public class BasicStack<X> { // <X> is saying that we can type this class to any
                 return tempItem;
             }
         }
+        throw new IllegalArgumentException("This item was not found on the stack: " + item);
+    }
+    
+    public int size() {
+        return stackPointer;
     }
 }
