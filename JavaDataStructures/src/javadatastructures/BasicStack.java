@@ -22,7 +22,12 @@ public class BasicStack<X> { // <X> is saying that we can type this class to any
     }
     
     public boolean contains(X item) {
-        
+        for (int i = 0; i < stackPointer; i++) {
+            if (data[i].equals(item)) {
+                return true;
+            }
+        }
+        return false;
     }
     
     public X access(X item) {
