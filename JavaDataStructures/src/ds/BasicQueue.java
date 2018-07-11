@@ -25,10 +25,12 @@ public class BasicQueue<X> {
     }
     
     public void enqueue(X newItem) {
-        front = 0;
+        if (front == -1) {
+            front = 0;
+        }
+      
         data[end++] = newItem;
-        queuePointer++;
-        
+        end++;
     }
     
     public X dequeue() {
