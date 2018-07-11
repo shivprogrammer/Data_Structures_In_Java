@@ -6,4 +6,12 @@ public class BasicStack<X> { // <X> is saying that we can type this class to any
     public BasicStack() {
         data = (X[]) new Object[1000];
     }
+    
+    public void push(X newItem) {
+        
+    }
+    
+    public X pop() {
+        
+    }
 }
