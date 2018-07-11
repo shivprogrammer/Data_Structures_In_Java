@@ -14,7 +14,7 @@ public class BasicStack<X> { // <X> is saying that we can type this class to any
     }
     
     public X pop() {
-        
+        return data[--stackPointer];
     }
     
     
