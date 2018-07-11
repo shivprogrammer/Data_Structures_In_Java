@@ -1,5 +1,7 @@
 package apps;
 
+import ds.BasicStack;
+
 public class CardStackApp {
 	BasicStack<String> stack = new BasicStack<String>();
 
@@ -12,7 +14,7 @@ public class CardStackApp {
 		app.stackCards();
 		
 		//how many cards are on the deck
-		app.desckSize();
+		app.deckSize();
 		
 		//do we have queen of hearts in the deck
 		app.containsCard("Queen of Hearts");
@@ -24,7 +26,7 @@ public class CardStackApp {
 		app.goToCard("King of Diamonds");
 
 		//now how many cards are on the deck
-		app.desckSize();
+		app.deckSize();
 }
 
 	public void stackCards() {		
@@ -104,7 +106,7 @@ public class CardStackApp {
 		System.out.println(stack.access(card));
 	}
 
-	public void desckSize() {			
+	public void deckSize() {			
 		System.out.println(stack.size());
 	}
 }
