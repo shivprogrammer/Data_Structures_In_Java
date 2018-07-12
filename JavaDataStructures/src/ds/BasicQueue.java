@@ -48,12 +48,14 @@ public class BasicQueue<X> {
         
         else if (front == end) {
             item = data[front];
+            data[front] = null;
             front = -1;
             end = -1;
         }
         
         else {
             item = data[front];
+            data[front] = null;
             front++;
         }
         
