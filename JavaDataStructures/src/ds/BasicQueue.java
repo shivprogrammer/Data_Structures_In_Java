@@ -63,7 +63,19 @@ public class BasicQueue<X> {
     }
     
     public boolean search(X item) {
+        if (size() == 0) {
+            throw new IllegalStateException("This Queue is empty");
+        }
         
+        else {
+            for (int i = front; i < end; i++) {
+                if (data[i] == item) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
     }
     
     public X access(X item) {
