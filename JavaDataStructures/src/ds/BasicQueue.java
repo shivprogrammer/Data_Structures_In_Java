@@ -40,9 +40,24 @@ public class BasicQueue<X> {
     }
     
     public X dequeue() {
-        front++;
-        return data[front - 1];
+        X item = null;
         
+        if (size() == 0) {
+            throw new IllegalStateException("The Query is Empty");
+        }
+        
+        else if (front == end) {
+            item = data[front];
+            front = -1;
+            end = -1;
+        }
+        
+        else {
+            item = data[front];
+            front++;
+        }
+        
+        return item;
     }
     
     public boolean search(X item) {
