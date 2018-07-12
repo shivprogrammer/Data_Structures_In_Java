@@ -78,7 +78,17 @@ public class BasicQueue<X> {
         return false;
     }
     
-    public X access(X item) {
+    public X access(int position) {
+        if (size() == 0) {
+            throw new IllegalStateException("This queue is empty");
+        }
         
+        else if (position < front || position > end) {
+            throw new IllegalStateException("This position does not exist in this queue");
+        }
+        
+        else {
+            return data[position];
+        }
     }
 }
