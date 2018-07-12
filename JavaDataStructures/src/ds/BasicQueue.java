@@ -62,14 +62,14 @@ public class BasicQueue<X> {
         return item;
     }
     
-    public boolean search(X item) {
+    public boolean contains(X item) {
         if (size() == 0) {
-            throw new IllegalStateException("This Queue is empty");
+            return false;
         }
         
         else {
             for (int i = front; i < end; i++) {
-                if (data[i] == item) {
+                if (data[i].equals(item)) {
                     return true;
                 }
             }
