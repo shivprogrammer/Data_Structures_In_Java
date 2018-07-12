@@ -21,9 +21,9 @@ public class SnowbirdLiftApp {
 		
 		//who's at the 2nd position - remember 0 based index
 		System.out.println("2nd chair has: " + gad2Lift.access(1).listChairRiders());
-
+                
 		unloadLift();
-		
+               		
 		//if the lift is unloaded again, an error should occur since no one is left on it
 		try {
 			unloadLift();
